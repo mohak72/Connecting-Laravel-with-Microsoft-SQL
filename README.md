@@ -47,15 +47,23 @@ curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sou
 	sudo apt-get install unixodbc-dev
 	
 Step4:-Install pecl and enableing extensions(Installs PECL packages for php so that MS SQL dependencies can be overcomed for installation and proper functioning)
+
 	sudo apt-get -y install gcc g++ make autoconf libc-dev pkg-config
  (Installs DEV-package )
+ 
 	sudo pecl7.2 install sqlsrv
  (Installs SQLSRV-the main playing php extension for establishing connection between php and mssql) 
+ 
 	sudo pecl7.2 install pdo_sqlsrv
+	
 (Installs PHP Data Objects PDO_SQLSRV-the main playing php extension for establishing connection between php and mssql)
+
 	sudo bash -c "echo extension=sqlsrv.so > /etc/php7.X-sp/conf.d/sqlsrv.ini"
+	
 (Declares sqlsrv extension to the desired PHP version directory)
+
 	sudo bash -c "echo extension=pdo_sqlsrv.so > /etc/php7.X-sp/conf.d/pdo_sqlsrv.ini"
+	
 (Declares pdo_sqlsrv extension to the desired PHP version directory))
 
 Step5:-Virtual host
