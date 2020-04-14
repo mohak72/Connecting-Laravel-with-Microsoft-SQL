@@ -94,8 +94,12 @@ npm install(Installs project based npm modules and dependencies.)
 
 Errors and Alternatives :-
 In case any error related to DB connection occurs you can try installing following php extensions which are additional and may correct the error:-
+
 sudo apt-get install -y php7.2-pdo-odbc
 Or
+
 sudo apt-get install -y php7.2-pdo-dblib
+
 Or
+
 Sudo apt-get install php7.2-sybase
